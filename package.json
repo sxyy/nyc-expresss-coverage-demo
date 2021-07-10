@@ -1,0 +1,36 @@
+{
+  "author": "Krishnan Anantheswaran <kananthmail-github@yahoo-inc.com>",
+  "name": "istanbul-middleware",
+  "description": "Connect middleware for Istanbul to handle server-side as well as browser coverage use-cases for node apps",
+  "version": "0.2.2",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:gotwarlost/istanbul-middleware.git"
+  },
+  "scripts": {
+    "pretest": "jshint --config ./node_modules/yui-lint/jshint.json lib/*js",
+    "test": "./test/run.sh",
+    "instrument": "nyc instrument ./server ./server-instrument",
+    "report": " nyc report --reporter=html"
+  },
+  "contributors": [
+    "@arboleya",
+    "@harking",
+    "@mikaturunen",
+    "@jelmertanen",
+    "@tkmunzwa",
+    "@mcollina",
+    "@lpinca"
+  ],
+  "dependencies": {
+    "body-parser": "~1.12.3",
+    "express": "4.x",
+    "hbs": ">=1.0.2",
+    "nopt": "*",
+    "nyc": "^15.1.0"
+  },
+  "engines": {
+    "node": ">=0.6.x"
+  },
+  "license": "BSD"
+}
